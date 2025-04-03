@@ -39,7 +39,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(false);
   const [debouncedCity, setDebouncedCity] = useState<string>("");
   const [error, setError] = useState<string>("");
-  const [bgImage, setBgImage] = useState<string>("/morning.jpg");
+  const [bgImage, setBgImage] = useState<string>("/bg.jpg");
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -142,11 +142,11 @@ function App() {
   return (
     <>
       <div
-        className="absolute w-full h-[100vh] bg-cover bg-center transition-all duration-500 opacity-[0.7] z-[-1]"
+        className="absolute w-full h-[100vh] bg-cover bg-center transition-all duration-500 opacity-[0.8] z-[-1]"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
-      <div className="text-[#393939] flex flex-col gap-8 justify-center items-center w-full h-[100vh] mona">
-        <div className="text-gray-400 border-gray-300 bg-white rounded-md px-4 py-2 flex justify-center items-center">
+      <div className="text-[#393939] flex flex-col gap-8 justify-center items-center w-full h-[100vh] mona p-8">
+        <div className="text-gray-400 border-gray-300 bg-white rounded-md px-4 py-2 flex justify-center items-center sm:w-100 lg:w-120">
           <input
             type="text"
             placeholder="Search city..."
@@ -160,8 +160,8 @@ function App() {
           {loading ? (
             <div className="w-8 h-8 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
           ) : weatherData ? (
-            <div className="flex flex-col gap-2 justify-center items-center backdrop-blur-xl rounded-xl p-6 shadow-md">
-              <p className="font-semibold text-5xl text-gray-800 text-center">
+            <div className="flex flex-col gap-2 justify-center items-center backdrop-blur-xl rounded-xl p-6 shadow-md min-w-[200px] max-w-[500px]">
+              <p className="text-5xl lg:text-[70px] text-gray-800 text-center">
                 {weatherData?.location.name}
               </p>
               <p className="flex justify-center items-center gap-3 text-blue-300 text-4xl">
