@@ -148,7 +148,7 @@ function App() {
       ></div>
       <div className="text-[#393939] flex flex-col gap-8 justify-center items-center w-full h-[100vh] mona p-8">
         <h1 className="lg:text-5xl text-white text-4xl">CLOUDSENSE</h1>
-        <div className="text-gray-800 border-gray-300 bg-white/20 rounded-md px-4 py-2 flex justify-center items-center w-75 lg:w-130">
+        <div className="text-gray-1000 border-gray-300 bg-white/20 rounded-full px-4 py-2 flex justify-center items-center w-75 lg:w-130">
           <input
             type="text"
             placeholder="Search city..."
@@ -183,7 +183,7 @@ function App() {
               </div>
             </div>
           ) : (
-            <p>{error}</p>
+            <p className="text-white">{error}</p>
           )}
         </div>
       </div>
