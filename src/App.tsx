@@ -86,11 +86,11 @@ function App() {
 
       if (formattedTime3 >= 1 && formattedTime3 < 6) {
         setBgImage("/dawn.jpg");
-      } else if (formattedTime3 > 6 && formattedTime3 < 12) {
+      } else if (formattedTime3 >= 6 && formattedTime3 < 12) {
         setBgImage("/morning.jpg");
-      } else if (formattedTime3 > 12 && formattedTime3 < 18) {
+      } else if (formattedTime3 >= 12 && formattedTime3 < 18) {
         setBgImage("/afternoon.jpg");
-      } else if (formattedTime3 > 18 && formattedTime3 < 24) {
+      } else if (formattedTime3 >= 18 && formattedTime3 < 24) {
         setBgImage("/night.jpg");
       } else {
         setBgImage("/bg.jpg");
