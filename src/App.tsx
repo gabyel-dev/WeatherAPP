@@ -55,6 +55,7 @@ function App() {
     if (!debouncedCity) {
       setWeatherData(null);
       setError("");
+      setBgImage("/bg.jpg");
       return;
     }
 
@@ -163,7 +164,11 @@ function App() {
             <div className="flex flex-col gap-2 justify-center items-center backdrop-blur-xl rounded-xl p-6 shadow-md min-w-[200px] max-w-[500px]">
               <p className="text-5xl lg:text-[70px] text-gray-800 text-center">
                 {weatherData?.location.name}
+                <p className="text-xl lg:text-2xl text-gray-800 text-center">
+                  {weatherData?.location.region}/{weatherData?.location.country}
+                </p>
               </p>
+
               <p className="flex justify-center items-center gap-3 text-blue-300 text-4xl">
                 {getWeatherIcon(weatherData?.current.condition.text || "")}
                 {weatherData?.current.temp_c} °c
