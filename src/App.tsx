@@ -143,11 +143,12 @@ function App() {
   return (
     <>
       <div
-        className="absolute w-full h-[100vh] bg-cover bg-center transition-all duration-500 opacity-[0.8] z-[-1]"
+        className="absolute w-full h-[100vh] bg-cover bg-center transition-all duration-300 opacity-[0.8] z-[-1]"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
       <div className="text-[#393939] flex flex-col gap-8 justify-center items-center w-full h-[100vh] mona p-8">
-        <div className="text-gray-400 border-gray-300 bg-white rounded-md px-4 py-2 flex justify-center items-center sm:w-100 lg:w-120">
+        <h1 className="lg:text-5xl text-white text-4xl">CLOUDSENSE</h1>
+        <div className="text-gray-800 border-gray-300 bg-white/20 rounded-md px-4 py-2 flex justify-center items-center w-75 lg:w-130">
           <input
             type="text"
             placeholder="Search city..."
